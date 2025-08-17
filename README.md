@@ -81,13 +81,6 @@ If you found this useful, you can support development via TRON (TRX):
 
 💠 Wallet Address: TXDhVJDtkBUq2KN3QYZW4zDtkJkLLwFVgb
 
-## License
-
-This project is licensed under the CC BY-NC 4.0 License.
-
-✅ You are free to share and modify the code.
-
-❌ Commercial use is not allowed.
 
 ### 📞 Contact
 📬 Telegram: @zlt_x28_unlock
