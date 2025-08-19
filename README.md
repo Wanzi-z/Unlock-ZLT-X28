@@ -23,15 +23,8 @@ The ZLT X28 modem is based on a customized snapshot of [OpenWrt](https://www.goo
 - LAN cable  
 - Basic command-line knowledge  
 
-## Step 1: Enable DMZ  
-Connect a LAN cable from the internet-enabled modem to **Port 1** of the ZLT X28. This step is mandatory to activate **DMZ**, which cannot be enabled otherwise.  
-
-Next, activate **WAN** on the ZLT X28 as shown below:  
-
-![](img/enable-wan.png)
-
-## Step 2: Obtain `sessionId`  
-After enabling WAN, you must extract the `sessionId`.  
+## Step 1: Obtain `sessionId`  
+Before anything else, you need to extract the ‍`sessionId`.  
 
 Open your browser’s **Developer Tools**. The default shortcuts are:  
 
@@ -53,6 +46,19 @@ Open your browser’s **Developer Tools**. The default shortcuts are:
 Inside Developer Tools, switch to the **Network** tab, select any request, and copy the `sessionId` value. Save it for later use.  
 
 ![](img/sessionId.png)
+
+## Step 2: Enable WAN  
+Connect a LAN cable from the internet-enabled modem to **Port 1** of the ZLT X28. This step is mandatory to activate **DMZ**, which cannot be enabled otherwise.  
+
+Next, activate **WAN** on the ZLT X28 as shown below:  
+
+![](img/enable-wan.png)
+
+You can also enable WAN with this command and replacing `sessionId`.
+```bash
+curl 'https://192.168.70.1/cgi-bin/http.cgi' -X POST --data-raw '{"method":"POST","cmd":302,"LinkMode":"linkIP","IpVersion":"IPV4","IpMode":"dhcp","MTU":1500,"MRU":"","IpAddr4":"","Submask4":"","Gateway4":"","FirstDns4":"","SecDns4":"","NatEnable":"1","UserName":"","PassWd":"","priorityStrategy":"1","uisMode":"0","networkMode":"2","wifiMode2":"0","wifiMode5":"0","MacClone":"","vlanId":"","Dhcpv6Mode":"Yes","IpAddr6":"","IpAddr6Len":"","Gateway6":"","FirstDns6":"","SecDns6":"","wanRouter":"1","apnRouter0":"0","apnRouter1":"0","apnRouter2":"0","apnRouter3":"0","wifi2Router":"0","wifi5Router":"0","token":"cd55e4e9b9e941b0bf949db815d104d9","language":"EN","sessionId":"<YOUR_SESSION_ID>"}' -k
+
+```
 
 ## Step 3: Enable Telnet  
 Run the following command from your system’s terminal, replacing the placeholder `sessionId` with the one you retrieved earlier:  
