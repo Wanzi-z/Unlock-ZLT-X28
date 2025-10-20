@@ -91,10 +91,6 @@ If you found this useful, you can support development via TRON (TRX):
 💠 Wallet Address: TXDhVJDtkBUq2KN3QYZW4zDtkJkLLwFVgb
 
 
-### 📞 Contact
-📬 Telegram: @zlt_x28_unlock
----
-
 #ZLT_X28 #Modem_Unlock #Admin_Panel_Access #Custom_Modem_UI #Firmware_Upgrade #4G_Modem_Unlock #Network_Unlock_ZLT #ZLT_Admin_Unlock
 
 
